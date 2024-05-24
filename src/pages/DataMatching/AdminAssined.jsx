@@ -194,10 +194,10 @@ const AdminAssined = () => {
   };
 
   return (
-    <div className=" min-h-[100vh] templatemapping">
-      <div className=" pt-40">
+    <div className=" min-h-[100vh]  flex items-center justify-center templatemapping">
+      <div className="mt-[10vh]">
         {/* MAIN SECTION  */}
-        <section className="mx-auto w-full max-w-7xl px-8 py-10 bg-white rounded-xl">
+        <section className="mx-auto w-full max-w-7xl px-8 py-10 bg-white rounded-xl ">
           <div className="flex flex-col space-y-4  md:flex-row md:items-center md:justify-between md:space-y-0">
             <div>
               <h2 className="text-3xl font-semibold">Assigned Tasks</h2>
@@ -235,7 +235,7 @@ const AdminAssined = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="divide-y divide-gray-200 bg-white">
+                    <div className="divide-y divide-gray-200 bg-white overflow-y-auto h-[40vh]">
                       {compareTask?.map((taskData) => (
                         <div
                           key={taskData.id}

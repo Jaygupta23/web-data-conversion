@@ -198,7 +198,7 @@ const ImageScanner = () => {
   };
 
   return (
-    <div className="flex duplicateImg border-1 pt-[3%] ">
+    <div className="flex duplicateImg border-1 pt-[3%] pb-[12 px]">
       {showDuplicates ? (
         <div className="flex justify-center w-[100%] pb-32 mb-10">
           <div className="mt-40 w-[800px]">

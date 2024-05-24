@@ -153,9 +153,9 @@ const ImageUploader = () => {
 
   return (
     <div>
-      <section className="bgImage h-[100vh]">
-        <div className="mx-auto max-w-screen-sm px-4 py-12 lg:flex lg:h-screen lg:items-center flex-col">
-          <div className="mt-[20%] border-2 border-dashed rounded-lg px-10 py-8 ">
+      <section className="bgImage flex justify-center items-center w-full">
+        <div className="mx-auto max-w-screen-sm lg:flex lg:h-screen lg:items-center">
+          <div className=" border-2 border-dashed rounded-lg px-10 py-8">
             <div className="text-white z-10">
               <h1 className="text-white text-center text-4xl mb-8 font-bold">
                 OMR India Outsources
