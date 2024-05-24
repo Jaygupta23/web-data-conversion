@@ -198,7 +198,7 @@ const ImageScanner = () => {
   };
 
   return (
-    <div className="flex duplicateImg border-1 pt-16">
+    <div className="flex duplicateImg border-1 pt-[3%] ">
       {showDuplicates ? (
         <div className="flex justify-center w-[100%] pb-32 mb-10">
           <div className="mt-40 w-[800px]">
@@ -270,12 +270,12 @@ const ImageScanner = () => {
         <>
           {/* LEFT SECTION  */}
           <div className="flex w-[30%]">
-            <div className="flex items-center  justify-center px-2 text-center sm:block sm:p-0">
+            <div className="flex items-center  justify-center px-4 text-center sm:block sm:p-0 w-full">
               {!editModal ? (
-                <div className="inline-block align-bottom h-[100vh]  bg-teal-100 rounded-lg text-left shadow-md overflow-hidden transform transition-all mt-4  sm:align-middle md:max-w-xl sm:w-full">
+                <div className="inline-block align-bottom  bg-teal-100  text-left shadow-md overflow-hidden transform transition-all mt-4  sm:align-middle w-full  ">
                   <div className=" py-4 px-4">
-                    <div className="sm:flex ">
-                      <div className="text-center sm:mt-0 sm:ml-4 sm:text-left">
+                    <div className="">
+                      <div className="text-center sm:mt-0  sm:text-left">
                         <div className="flex justify-between">
                           <h1 className="text-xl font-bold text-gray-500 mb-6">
                             Duplicates : {duplicatesData.length}
@@ -286,12 +286,12 @@ const ImageScanner = () => {
                         </div>
                         <div className="text-gray-600 font-semibold my-2">
                           <dl className="-my-3 divide-y divide-gray-100 text-sm">
-                            <div className="flex justify-between gap-1 py-3 text-center even:bg-gray-50 sm:grid-cols-7 sm:gap-4">
+                            <div className="flex justify-around gap-1 py-3 text-center even:bg-gray-50 sm:grid-cols-4 sm:gap-4">
                               <dt className="font-medium text-md text-gray-700">
                                 {columnName}
                               </dt>
                               <dd className="text-gray-700 font-medium ">
-                                Row Index
+                                Index
                               </dd>
                               <dd className="text-gray-700 font-medium">
                                 Edit
@@ -302,7 +302,7 @@ const ImageScanner = () => {
                             </div>
                           </dl>
                         </div>
-                        <div className="text-gray-600 font-semibold my-2 overflow-y-auto h-[80vh] mt-7">
+                        <div className="text-gray-600 font-semibold my-2 overflow-y-auto h-[75vh] mt-7">
                           <dl className="-my-3 divide-y divide-gray-100 text-sm">
                             {duplicatesData?.map((data, index) => (
                               <div
@@ -416,7 +416,7 @@ const ImageScanner = () => {
 
           {/* RIGHT SECTION  */}
           {!imageUrl ? (
-            <div className="flex w-[65%] justify-center items-center ">
+            <div className="flex w-[70%] justify-center items-center ">
               <div className="">
                 <ImageNotFound />
 
@@ -432,8 +432,9 @@ const ImageScanner = () => {
           ) : (
             <div className=" pb-2 w-[80%] py-3">
               <div className="mx-auto max-w-screen-xl px-2 lg:pt-2 sm:px-6 lg:px-8">
-                <div className="mt-2 flex justify-center pt-6 py-4">
+                <div className="mt-2 flex justify-center  ">
                   <div className="">
+                    <h2 className="text-center mb-2 font-medium text-lg">Image 1 out of 10</h2>
                     {imageUrl && (
                       <div
                         style={{
