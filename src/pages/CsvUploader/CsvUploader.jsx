@@ -151,14 +151,14 @@ const CsvUploader = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-[100vh]">
+    <div className="flex justify-center items-center h-[100vh] w-full">
       {dataCtx?.isLoading ? (
         <Loader />
       ) : (
-        <div className="csvuploader xl:h-[100vh] flex flex-col justify-center items-center">
-          <div className="xl:flex justify-center items-center gap-5 mb-5 mx-5">
+        <div className="csvuploader xl:h-[100vh] w-full flex flex-col justify-center items-center">
+          <div className="xl:flex justify-center items-center gap-5  mx-5">
             <div
-              className="mx-auto max-w-xl  h-[40vh] bg-white px-8 py-4 mt-5 text-center shadow-lg"
+              className="mx-auto max-w-xl  min-h-[300px] bg-white px-8 py-4 mt-5 text-center shadow-lg"
               style={{ borderRadius: "20px" }}
             >
               <h1 className="pb-2 text-xl font-semibold text-center">
@@ -193,7 +193,7 @@ const CsvUploader = () => {
                   className="input rounded-full ps-5 py-1 border-2 rounded-4 border-transparent  focus:outline-none focus:border-blue-500 placeholder-gray-400"
                 />
               </div>
-              <div className="overflow-y-scroll h-[130px] px-2">
+              <div className="overflow-y-scroll h-[20vh] px-2 bg-white">
                 {filteredTemplates?.map((template) => (
                   <button
                     key={template.id}
@@ -307,7 +307,7 @@ const CsvUploader = () => {
               </p>
             </div>
           </div>
-          <div className="flex-col  justify-center">
+          <div className="flex-col mt-5 justify-center">
             <button
               type="submit"
               onClick={onSaveFilesHandler}

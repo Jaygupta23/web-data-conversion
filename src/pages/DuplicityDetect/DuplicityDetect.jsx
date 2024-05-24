@@ -198,12 +198,12 @@ const ImageScanner = () => {
   };
 
   return (
-    <div className="flex duplicateImg border-1 pt-[3%] pb-[12 px]">
+    <div className="flex h-[100vh]  duplicateImg border-1">
       {showDuplicates ? (
-        <div className="flex justify-center w-[100%] pb-32 mb-10">
-          <div className="mt-40 w-[800px]">
+        <div className="flex items-center h-[100vh] justify-center w-[100%] ">
+          <div className=" w-[800px]">
             {/* MAIN SECTION  */}
-            <section className="mx-auto w-full max-w-7xl  px-12 py-10 bg-white rounded-xl">
+            <section className="mx-auto w-full max-w-7xl  px-12 py-5 bg-white rounded-xl">
               <div className="flex flex-col space-y-4  md:flex-row md:items-center md:justify-between md:space-y-0">
                 <div>
                   <h2 className="text-3xl font-semibold">Find Duplicates</h2>
@@ -221,13 +221,13 @@ const ImageScanner = () => {
                             </div>
                           </div>
                         </div>
-                        <div className="divide-y divide-gray-200 bg-white overflow-y-auto max-h-[300px] w-full">
+                        <div className="divide-y divide-gray-200 bg-white overflow-y-auto max-h-[200px] w-full">
                           {csvHeaders?.map((columnName, index) => (
                             <div
                               key={index}
                               className="flex justify-between items-center"
                             >
-                              <div className="whitespace-nowrap px-4 py-4">
+                              <div className="whitespace-nowrap px-4 py-2">
                                 <div className="flex items-center">
                                   <div className="ml-4 w-full font-semibold">
                                     <div className=" px-2">{columnName}</div>
@@ -235,7 +235,7 @@ const ImageScanner = () => {
                                 </div>
                               </div>
 
-                              <div className="whitespace-nowrap px-4 py-4 text-right">
+                              <div className="whitespace-nowrap px-4 py-2 text-right">
                                 <button
                                   onClick={() =>
                                     onFindDuplicatesHandler(columnName)
@@ -258,7 +258,7 @@ const ImageScanner = () => {
                   onClick={onDuplicateCheckedHandler}
                   class="group inline-block rounded bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-[2px] hover:text-white focus:outline-none focus:ring active:text-opacity-75"
                 >
-                  <span class="block rounded-sm  px-8 py-3 text-sm font-medium group-hover:bg-transparent">
+                  <span class="block rounded-sm  px-8 py-2   text-sm font-medium group-hover:bg-transparent">
                     Complete
                   </span>
                 </button>
@@ -270,7 +270,7 @@ const ImageScanner = () => {
         <>
           {/* LEFT SECTION  */}
           <div className="flex w-[30%]">
-            <div className="flex items-center  justify-center px-4 text-center sm:block sm:p-0 w-full">
+            <div className="flex   px-4 text-center sm:block sm:p-0 w-full">
               {!editModal ? (
                 <div className="inline-block align-bottom  bg-teal-100  text-left shadow-md overflow-hidden transform transition-all mt-4  sm:align-middle w-full  ">
                   <div className=" py-4 px-4">
@@ -302,7 +302,7 @@ const ImageScanner = () => {
                             </div>
                           </dl>
                         </div>
-                        <div className="text-gray-600 font-semibold my-2 overflow-y-auto h-[75vh] mt-7">
+                        <div className="text-gray-600 font-semibold my-2 overflow-y-auto h-[80vh] mt-7">
                           <dl className="-my-3 divide-y divide-gray-100 text-sm">
                             {duplicatesData?.map((data, index) => (
                               <div
